@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Config>
+  <!-- Specify the source path. It can be a directory or a single file -->
+  <Source path="" />
+  <FileStrategy>
+    <!-- 
+      // Add one or more file strategy from Move and Copy
+      
+      <Move path="" overwrite="true|false|continue" with=".txt,.tiff" />
+      <Copy path="" overwrite="true|false|continue" />
+    -->
+  </FileStrategy>
+  <!-- 
+    // Specify a list of matching source file extension to apply all FileStrategy
+    <GroupedWith>csv,tiff</GroupedWith 
+  -->
+  <Directives>
+    <!--
+      // Add one or more directives that instruct the bot how to move, copy and rename columns
+      // in your csv file
+    
+      // move a column from position 10 to position 1 and rename the column to "Customer ID"
+      <Directive position="10" action="move" to="1" rename="Customer ID" />
+      
+      // copy a column from position 10 to position 1 and rename the column to "Customer ID"
+      <Directive position="10" action="copy" to="1" rename="Customer ID" />
+      
+      // rename column at position 10 to "Customer ID"
+      <Directive position="10" rename="Customer ID" />
+    -->
+  </Directives>
+  <!-- Specify the CSV separator -->
+  <Separator>;</Separator>
+</Config>
